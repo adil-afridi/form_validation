@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./all.css">
+</head>
+<body>
+
+    <div class="form_container">
+        <i class="fas fa-paper-plane plane"></i>
+
+        <form action="">
+            <div class="input_groups">
+                <label for="">Full Name</label>
+                <input type="text" class="uname" placeholder="Enter your name" onkeyup="validateName()">
+                <span class="error name_error"></span>
+            </div>
+            <div class="input_groups">
+                <label for="">Phone No.</label>
+                <input type="tel" class="phone_no" onkeyup="validatePhone()" placeholder="123 456 789">
+                <span class="error phone_error"></span>
+            </div>
+            <div class="input_groups">
+                <label for="">Email id</label>
+                <input type="text" class="email" onkeyup="validateEmail()" placeholder="Enter Email">
+                <span class="error email_error"></span>
+            </div>
+            <div class="input_groups">
+                <label for="">Your Message</label>
+                <textarea type="text" class="message" onkeyup="validateMessage()" row="5" placeholder="Enter your message"></textarea>
+                <span class="error message_error"></span>
+            </div>
+
+            <div class="footer">
+                <button onclick="return validateForm()">Submit</button>
+                <span class="error submit_error"></span>
+            </div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
